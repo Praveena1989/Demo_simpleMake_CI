@@ -11,7 +11,7 @@ BUILD = build
 # Generated variables #
 #######################
 
-SRC = $(shell find . -name '*.c')
+SRC = $(shell find . -name "*.c")
 OBJ = $(SRC:./%.c=$(BUILD)/%.o)
 TARGET_BINARY = $(BUILD)/$(BINARY)
 
@@ -28,7 +28,7 @@ clean:
 	rm -df $(BUILD)
 
 check:$(TARGET_BINARY)
-       @#Execute binary and verify output, it returns 0 (success) or 1(fail)
+       @# Execute binary and verify output, it returns 0 (success) or 1(fail)
        @["$$($(TARGET_BINARY))"="Hello world!" ]||\
           (echo "Output does not match:"\
 		  "\n$$($(TARGET_BINARY))"\
