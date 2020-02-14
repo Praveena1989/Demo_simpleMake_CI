@@ -11,7 +11,7 @@ BUILD = build
 # Generated variables #
 #######################
 
-SRC = $(shell find . -name "*.c")
+SRC = $(shell find . -name	"*.c")
 OBJ = $(SRC:./%.c=$(BUILD)/%.o)
 TARGET_BINARY = $(BUILD)/$(BINARY)
 
